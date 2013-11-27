@@ -1,0 +1,130 @@
+
+
+.field {
+    margin: 18px 0;
+    position: relative;
+    width: 490px;
+    clear:both;
+}
+
+label {
+    display: block;
+    width: 118px;
+    padding:0 18px 0 0;
+    float: left;
+    color: #666;
+    text-align: right;
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+}
+
+.error, .tooltip {
+    height: 16px;
+    width: 186px;
+    background-color: #FFCFCF;
+    border: 1px solid #E5A3A3;
+    font: 11px/16px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+    color: #801B1B;
+    padding: 8px 2px 8px 8px;
+    margin-left: -2px;
+    border-radius: 0 9px 9px 0;
+    -moz-border-radius: 0 9px 9px 0;
+    -webkit-border-radius: 0 9px 9px 0;
+    -moz-box-shadow: 0 0 6px #ddd;
+    -webkit-box-shadow: 0 0 6px #ddd;
+    z-index: 999;
+}
+
+.error{
+    z-index:9999;
+}
+
+.error span, .tooltip span{
+    width:186px;
+    display:block;
+}
+
+.tooltip {
+    background: #F2F2F2;
+    border-color: #DBDBDB;
+    color: #666;
+}
+
+.overlay {
+    display: none;
+    z-index: 10000;
+    background-color: #fff;
+    width: 912px;
+    padding: 24px;
+    min-height: 200px;
+    border: 1px solid #666;
+    background: -webkit-gradient(linear, left top, left 30, from(#f1f1f1), color-stop(4%, #ffffff), to(#f4f4f4));
+    background: -moz-linear-gradient(top, #f4f4f4, #ffffff 1px, #f4f4f4 95%);
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 4px #ddd;
+    -moz-box-shadow: 0px 1px 4px #ddd;
+}
+
+
+.overlay .close:before {
+    content: 'X';
+}
+
+.overlay .close {
+    background: #eee;
+    border-radius: 17px;
+    -moz-border-radius: 17px;
+    -webkit-border-radius: 17px;
+    border: 1px solid #AAAAAA;
+    cursor: pointer;
+    height: 23px;
+    padding-top: 5px;
+    position: absolute;
+    right: -15px;
+    text-align: center;
+    top: -15px;
+    width: 29px;
+}
+
+#exposeMask{
+    position:fixed !important;
+}
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/*
+	The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child+html .clearfix {
+    zoom: 1;
+}
